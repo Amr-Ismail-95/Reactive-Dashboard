@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, route, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { Button, Cart, ChartsHeader, Chat, Footer, Header, NavBar, Notification, SideBar, ThemeSettings, UserProfile} from './Components'
-import {Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping,Line,  Editor} from './Pages'
+import {Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Line,  Editor} from './Pages'
 import { useStateContext } from "./Context/ContextProvider";
 
 const App = () => {
