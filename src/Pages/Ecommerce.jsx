@@ -84,7 +84,7 @@ const Ecommerce = () => {
                 <div className='mt-5'>
                   <SparkLine 
                   currentColor='blue'
-                  id='line-sparkline'
+                  id='sparkline'
                   height='80px'
                   width='250px'
                   type='line'
