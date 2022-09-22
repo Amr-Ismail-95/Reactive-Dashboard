@@ -621,7 +621,7 @@ export const earningData = [
     title: 'Customers',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
-    pcColor: 'red-600',
+    pcColor: 'text-red-600',
   },
   {
     icon: <BsBoxSeam />,
@@ -630,7 +630,7 @@ export const earningData = [
     title: 'Products',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
-    pcColor: 'green-600',
+    pcColor: 'text-green-600',
   },
   {
     icon: <FiBarChart />,
