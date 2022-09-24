@@ -479,7 +479,7 @@ export const links = [
     title: 'Dashboard',
     links: [
       {
-        name: 'ecommerce',
+          name: 'ecommerce',
         icon: <FiShoppingBag />,
       },
     ],
@@ -3187,7 +3187,7 @@ export const stackedCustomSeries = [
     yName: 'y',
     name: 'Budget',
     type: 'StackingColumn',
-    background: 'blue',
+    background: 'green',
 
   },
 
