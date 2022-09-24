@@ -1,4 +1,4 @@
-import react, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const  StateContext = createContext();
 
@@ -18,6 +18,10 @@ export const ContextProvider = ({children}) => {
     const [currentColor, setCurrentColor] = useState('#03C9D7')
     const [currentMode, setCurrentMode] = useState('light')
     const [themeSettings, setThemeSettings] = useState(false)
+    const [profile, setProfile] = useState(true)
+    const [noti, setNoti] = useState(true)
+    const [chatting, setChatting] = useState(true)
+    const [cartMenu, setCartMenu] = useState(true)
 
     const setMode = (e) => {
         setCurrentMode(e.target.value)
@@ -25,7 +29,7 @@ export const ContextProvider = ({children}) => {
         setThemeSettings(false)
     }
     const setColor = (color) => {
-             setCurrentColor(color)
+            setCurrentColor(color)
         localStorage.setItem('colorMode', color)
         setThemeSettings(false)
     }
@@ -45,7 +49,15 @@ export const ContextProvider = ({children}) => {
             currentMode,
             setMode,
             themeSettings,
-            setThemeSettings
+            setThemeSettings,
+            profile,
+            setProfile,
+            noti,
+            setNoti,
+            chatting,
+            setChatting,
+            cartMenu,
+            setCartMenu
         }}
         >
             {children}

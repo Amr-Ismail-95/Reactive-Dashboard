@@ -21,7 +21,7 @@ const Bar = () => {
       tooltip= {{enable: true}}
       
       >
-        <Inject services={[DateTime, Legend, ColumnSeries, Category, DataLabel ]}/>
+        <Inject services={[DateTime, Legend, ColumnSeries, Category, DataLabel, Tooltip ]}/>
         <SeriesCollectionDirective>
           {barCustomSeries.map((item,index)=> <SeriesDirective key={index} {...item}/>)}
         </SeriesCollectionDirective>

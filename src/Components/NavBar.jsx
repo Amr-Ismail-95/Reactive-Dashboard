@@ -11,7 +11,6 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 import {Cart, Chat, Notification, UserProfile} from '.'
 import { useStateContext } from '../Context/ContextProvider'
-import { remove } from '@syncfusion/ej2/base'
 
 
 const NavButton = ({title, customFunc, icon, color, dotColor}) =>(
@@ -25,7 +24,7 @@ const NavButton = ({title, customFunc, icon, color, dotColor}) =>(
 )
 
 const NavBar = () => {
-  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize, currentColor} = useStateContext();
+  const {setActiveMenu, isClicked, handleClick, screenSize, setScreenSize, currentColor, setProfile, setNoti, setChatting, setCartMenu} = useStateContext();
   useEffect(()=>{
     const handleResize = () => setScreenSize(window.innerWidth)
     window.addEventListener('resize', handleResize)
@@ -56,27 +55,32 @@ const NavBar = () => {
           
     <NavButton 
         title="Cart" 
-        customFunc={() => handleClick('cart')} 
+        customFunc={() => {handleClick('cart')
+      setCartMenu(true)}} 
         color={currentColor}
         icon={<FiShoppingCart/>} />
     
     <NavButton 
         title="Chat"
         dotColor='#30c9d7' 
-        customFunc={() => handleClick('chat')} 
+        customFunc={() => {handleClick('chat')
+      setChatting(true)
+      }} 
         color={currentColor}
         icon={<BsChatLeft/>} />
     
     <NavButton 
         title="Notifications"
         dotColor='#30c9d7' 
-        customFunc={() => handleClick('notification')} 
+        customFunc={() => {handleClick('notification')
+      setNoti(true)}} 
         color={currentColor}
         icon={<RiNotification3Line/>} />
     
     <TooltipComponent
     content='profile' position='BottomCenter'>
-      <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' onClick={()=> handleClick('userProfile')} >
+      <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' onClick={() => {handleClick('userProfile')
+    setProfile(true)}} >
           <img src={avatar} className='rounded-full w-8 h-8'/>
           <p>
             <span className='text-gray-400 text-14'>Hi,</span> {' '} 

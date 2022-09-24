@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Button = ({bgColor, color, size, text, borderRadius}) => {
+const Button = ({bgColor, color, customFunc, size, text, borderRadius, btnWidth}) => {
   return (
     <div>
-      <button type='button' 
+      <button 
+      type='button' 
+      onClick={customFunc}
       style={{
+        width: btnWidth,
         backgroundColor: bgColor,
         color,
         borderRadius,

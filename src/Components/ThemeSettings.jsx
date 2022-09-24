@@ -4,7 +4,6 @@ import { BsCheck } from 'react-icons/bs'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 import { themeColors } from '../data/dummy'
 import { useStateContext } from '../Context/ContextProvider'
-import { Item } from '@syncfusion/ej2/navigations'
 
 
 const ThemeSettings = () => {
