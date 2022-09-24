@@ -613,7 +613,7 @@ export const chatData = [
     image:
       avatar,
     message: "You've completed tasks",
-    desc: 'Assign her new tasks',
+    desc: 'New tasks Available',
     time: '1:12 AM',
   },
 ];
